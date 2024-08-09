@@ -36,3 +36,7 @@
 ## Run The Test with The Below Command
 
 `java -cp .;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore src.LibraryTest`
+
+#### Used VS Code Extention For Run The Tests 
+- Test Runner for Java: 
+``` https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test ```
