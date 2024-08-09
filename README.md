@@ -14,3 +14,9 @@
   - The system should update the availability of the book accordingly.
 #### View Available Books:
   - Users should be able to view a list of all available books in the library.
+
+
+|                    | Version            | 
+| ------------------ | ------------------ | 
+|    JAVA            | 19.0.2             | 
+|    Junit           | 4.13.2             | 
