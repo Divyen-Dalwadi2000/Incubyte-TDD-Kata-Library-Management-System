@@ -69,5 +69,7 @@ public class LibraryTest {
 
         assertTrue(library.getAvailableBooks().contains(book2));
         assertTrue(library.getAvailableBooks().contains(book4));
+
+        assertFalse(library.getAvailableBooks().contains(book1));
     }
 }
