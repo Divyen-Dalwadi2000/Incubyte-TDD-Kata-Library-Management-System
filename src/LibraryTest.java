@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThrows;
 
@@ -61,6 +62,10 @@ public class LibraryTest {
         library.addBook(book2);
         library.addBook(book3);
         library.addBook(book4);
+
+        library.borrowBook("81-203-1234-5");
+        library.borrowBook("81-203-1234-7");
+        assertEquals(2, library.getAvailableBooks().size());
 
         assertTrue(library.getAvailableBooks().contains(book2));
         assertTrue(library.getAvailableBooks().contains(book4));
