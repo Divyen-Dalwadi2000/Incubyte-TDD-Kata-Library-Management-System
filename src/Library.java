@@ -22,6 +22,9 @@ public class Library {
 
     public void borrowBook(String isbn) {
         Book book = books.get(isbn);
+        if (book == null || borrowedBooks.contains(book)) {
+            throw new IllegalStateException("Book is not available.");
+        }
         borrowedBooks.add(book);
     }
 
