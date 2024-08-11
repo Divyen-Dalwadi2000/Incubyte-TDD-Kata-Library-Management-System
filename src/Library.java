@@ -31,4 +31,9 @@ public class Library {
     public Set<Book> getBorrowedBooks() {
         return new HashSet<>(borrowedBooks);
     }
+
+    public void returnBook(String isbn) {
+        Book book = books.get(isbn);
+        borrowedBooks.remove(book);
+    }
 }

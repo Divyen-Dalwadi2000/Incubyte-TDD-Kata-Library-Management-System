@@ -39,4 +39,13 @@ public class LibraryTest {
         library.borrowBook("81-203-1234-5");
         assertThrows(IllegalStateException.class, () -> library.borrowBook("81-203-1234-5"));
     }
+
+    @Test
+    public void testReturnBook() {
+        Book book = new Book("81-203-1234-5", "Ruby", "Yukihiro Matsumoto", 2008);
+        library.addBook(book);
+        library.borrowBook("81-203-1234-5");
+        library.returnBook("81-203-1234-5");
+        assertTrue(library.getAvailableBooks().contains(book));
+    }
 }
