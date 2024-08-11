@@ -34,6 +34,9 @@ public class Library {
 
     public void returnBook(String isbn) {
         Book book = books.get(isbn);
+        if (book == null || !borrowedBooks.contains(book)) {
+            throw new IllegalStateException("Book was not borrowed.");
+        }
         borrowedBooks.remove(book);
     }
 }

@@ -47,5 +47,6 @@ public class LibraryTest {
         library.borrowBook("81-203-1234-5");
         library.returnBook("81-203-1234-5");
         assertTrue(library.getAvailableBooks().contains(book));
+        assertFalse(library.getBorrowedBooks().contains(book));
     }
 }
