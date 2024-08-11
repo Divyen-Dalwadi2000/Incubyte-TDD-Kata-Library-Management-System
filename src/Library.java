@@ -16,6 +16,7 @@ public class Library {
 
     public Set<Book> getAvailableBooks() {
         Set<Book> availableBooks = new HashSet<>(books.values());
+        availableBooks.removeAll(borrowedBooks);
         return availableBooks;
     }
 

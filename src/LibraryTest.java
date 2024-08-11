@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 public class LibraryTest {
 
@@ -27,5 +28,6 @@ public class LibraryTest {
         library.addBook(book);
         library.borrowBook("81-203-1234-5");
         assertTrue(library.getBorrowedBooks().contains(book));
+        assertFalse(library.getAvailableBooks().contains(book));
     }
 }
